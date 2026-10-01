@@ -7,6 +7,7 @@
 // The port the application listens on.
 const PORT = 3000;
 
+
 // The URL used to connect to the PostgreSQL database. It has the shape
 // postgresql://USER:PASSWORD@HOST:PORT/DATABASE. Change the password to match
 // the one you set when you ran schema.sql.
@@ -394,3 +395,4 @@ function renderNotFound() {
 app.listen(PORT, () => {
   console.log(`Guess It is listening on http://localhost:${PORT}`);
 });
+
