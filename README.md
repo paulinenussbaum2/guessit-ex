@@ -78,3 +78,4 @@ Then open <http://localhost:3000>.
 [node]: https://nodejs.org
 [pg]: https://node-postgres.com
 [postgres]: https://www.postgresql.org
+EQUIPE BOB ALICE
