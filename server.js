@@ -82,7 +82,8 @@ app.get('/', async (req, res, next) => {
     // Select the games that have been won (found_at is not null), best first:
     // the fewest attempts first, and among games with the same number of
     // attempts, the one found earliest first. Return only the top ten.
-    const leaderboardQuery = ''; // <-- IMPLEMENT ME
+    const leaderboardQuery = 'SELECT name, attempts, found_at FROM game WHERE found_at IS NOT NULL ORDER BY attempts ASC, found_at ASC LIMIT 10';
+; // <-- IMPLEMENT ME
 
     // If the leaderboard cannot be loaded, for example because the database is
     // not running, the page is shown anyway and the error is printed in the
@@ -199,7 +200,7 @@ app.post('/games/:id/delete', async (req, res, next) => {
     // Give up.
     //
     // Delete `game` from the database (its ID is `game.id`).
-    const deleteQuery = ''; // <-- IMPLEMENT ME
+    const deleteQuery = ''; 
     await db.query(deleteQuery);
 
     res.redirect('/');
