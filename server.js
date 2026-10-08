@@ -200,7 +200,7 @@ app.post('/games/:id/delete', async (req, res, next) => {
     // Give up.
     //
     // Delete `game` from the database (its ID is `game.id`).
-    const deleteQuery = ''; 
+    const deleteQuery = `DELETE FROM game WHERE id = '${game.id}'`; 
     await db.query(deleteQuery);
 
     res.redirect('/');
