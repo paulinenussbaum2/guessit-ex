@@ -44,8 +44,8 @@ The incomplete queries are marked with `// IMPLEMENT ME` comments in
    sudo -u postgres psql < schema.sql   # PostgreSQL installed with apt
    psql postgres < schema.sql           # Postgres.app, or Homebrew
    ```
-
-2. Set the same password in the `DATABASE_URL` at the top of `server.js`.
+2.  Whenever you run the application, set the `DATABASE_URL`      environment
+   variable to the URL of the database, with the same password.
 
 3. Install the dependencies:
 

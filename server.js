@@ -5,14 +5,13 @@
 // ===========================================================================
 
 // The port the application listens on.
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 
 
 // The URL used to connect to the PostgreSQL database. It has the shape
-// postgresql://USER:PASSWORD@HOST:PORT/DATABASE. Change the password to match
-// the one you set when you ran schema.sql.
 const DATABASE_URL =
-  'postgresql://guessit:90aae043582e5552f24ed3994c4ce65d@localhost:5432/guessit';
+  'postgresql://guessit@localhost:5432/guessit';
 
 // The colour used for the page's accent (buttons, title). Change it if you
 // like a different look.
